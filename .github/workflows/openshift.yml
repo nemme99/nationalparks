@@ -60,7 +60,7 @@ jobs:
     - name: Log in to OpenShift 
       uses: redhat-actions/oc-login@v1
       with:
-        openshift_server_url: https://api.aro-dev.intern.folksam.se:6443
+        openshift_server_url: ${{ env.OPENSHIFT_SERVER }}
         openshift_token: ${{ env.OPENSHIFT_TOKEN }}
         insecure_skip_tls_verify: true
         namespace: ${{ env.OPENSHIFT_NAMESPACE }}
